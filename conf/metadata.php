@@ -5,3 +5,5 @@
         $meta['notify_delete'] = array('onoff');
         $meta['show_summary'] = array('onoff');
         $meta['webhook'] = array('string');
+        $meta['username'] = array('string');
+        $meta['baseurl'] = array('string');

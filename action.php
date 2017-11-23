@@ -115,7 +115,7 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
                         $title .= " (<{$diffURL}|Compare changes>)";
                 }
         }
-        $this->_payload = array("text" => $title);
+        $this->_payload = array("text" => $title, "username" => $this->getConf('username'));
     }
 
     private function _set_payload_attachments() {
@@ -140,13 +140,13 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
         }
         switch($conf['userewrite']) {
                 case 0:
-                        $url = DOKU_URL . "doku.php?id={$page}";
+                        $url = $this->getConf('baseurl') . "doku.php?id={$page}";
                         break;
                 case 1:
-                        $url = DOKU_URL . $page;
+                        $url = $this->getConf('baseurl') . $page;
                         break;
                 case 2:
-                        $url = DOKU_URL . "doku.php/{$page}";
+                        $url = $this->getConf('baseurl') . "doku.php/{$page}";
                         break;
         }
         if (!empty($oldRev)) {
