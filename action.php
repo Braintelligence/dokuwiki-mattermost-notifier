@@ -136,17 +136,17 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
         global $INFO;
         $page = $INFO['id'];
         if (($conf['userewrite'] == 1 || $conf['userewrite'] == 2) && $conf['useslash'] == true) {
-                return str_replace(":", "/", $page);
+                $page = str_replace(":", "/", $page);
         }
         switch($conf['userewrite']) {
                 case 0:
-                        $url = $this->getConf('baseurl') . "doku.php?id={$page}";
+                        $url = DOKU_URL . "doku.php?id={$page}";
                         break;
                 case 1:
-                        $url = $this->getConf('baseurl') . $page;
+                        $url = DOKU_URL . $page;
                         break;
                 case 2:
-                        $url = $this->getConf('baseurl') . "doku.php/{$page}";
+                        $url = DOKU_URL . "doku.php/{$page}";
                         break;
         }
         if (!empty($oldRev)) {

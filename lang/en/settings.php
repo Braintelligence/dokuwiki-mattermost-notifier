@@ -6,4 +6,3 @@
         $lang['show_summary'] = "Show summary if one exists";
         $lang['webhook']    = "Mattermost Incoming Webhook URL";
         $lang['username']   = "Username for the bot to use";
-        $lang['baseurl']    = "The base URL for your wiki instance";

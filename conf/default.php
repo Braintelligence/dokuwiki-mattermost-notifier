@@ -6,4 +6,3 @@
         $conf['show_summary'] = 1;
         $conf['webhook']  = "https://mattermost.example.com/hooks/hook";
         $conf['username']  = "WikiBot";
-        $conf['baseurl']  = "https://wiki.example.com";
