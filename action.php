@@ -96,7 +96,7 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
         $user = $INFO['userinfo']['name'];
         $link = $this->_get_url();
         $page = $INFO['id'];
-        $title = "{$user} {$event} page <{$link}|{$page}>";
+        $title = "{$user} {$event} page [$page]($link)";
         /* Searching changelogs yields previous revisions for
          * created pages that had been deleted, however we'll
          * use last_change which ignores these (so we won't
@@ -112,7 +112,7 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
                 $oldRev = $INFO['meta']['last_change']['date'];
                 if (!empty($oldRev)) {
                         $diffURL = $this->_get_url($oldRev);
-                        $title .= " (<{$diffURL}|Compare changes>)";
+                        $title .= " ([Compare Changes]({$diffURL}))";
                 }
         }
         $this->_payload = array("text" => $title, "username" => $this->getConf('username'));
