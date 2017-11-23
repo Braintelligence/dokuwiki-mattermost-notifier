@@ -1,7 +1,7 @@
-base   slacknotifier
-author mallchin
-email  mallchin@outlook.com
-date   2016-06-11
-name   Slack Notifier
-desc   Notify page events via Slack
-url    https://www.github.com/mallchin/dokuwiki-slack-notifier/
+base   mattermostnotifier
+author James Droste
+email  james@droste.im
+date   2017-11-23
+name   Mattermost Notifier
+desc   Notify page events via Mattermost
+url    https://www.github.com/jtdroste/dokuwiki-mattermost-notifier/
