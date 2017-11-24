@@ -191,7 +191,7 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
 
         // submit payload
         curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, 'payload='.$json);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, 'payload='.urlencode($json));
         curl_setopt($ch, CURLOPT_TIMEOUT, 10);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $result = curl_exec($ch);
