@@ -84,13 +84,13 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
         global $INFO;
         switch ($this->_event) {
                 case 'create':
-                        $event = "created";
+                        $event = "erstellte";
                         break;
                 case 'edit':
-                        $event = "updated";
+                        $event = "updatete";
                         break;
                 case 'delete':
-                        $event = "removed";
+                        $event = "löschte";
                         break;
         }
         $user = $INFO['userinfo']['name'];
@@ -116,6 +116,9 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
                 }
         }
         $this->_payload = array("text" => $title, "username" => $this->getConf('username'));
+        if ($this->getConf('icon') {
+            array_push($this->_payload, "icon_url" => $this->getConf('icon'));   
+        }
     }
 
     private function _set_payload_attachments() {
@@ -124,8 +127,8 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
         $user = $INFO['userinfo']['name'];
         if ($this->getConf('show_summary') == 1 && !empty($SUM)) {
                 $this->_payload['attachments'] = array(array(
-                        "fallback"      => "Change summary",
-                        "title"         => "Summary",
+                        "fallback"      => "Ändere Zusammenfassung",
+                        "title"         => "Zusammenfassung",
                         "text"          => "{$SUM}\n- {$user}"
                 ));
         }
