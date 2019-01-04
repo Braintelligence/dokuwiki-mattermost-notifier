@@ -6,3 +6,4 @@
         $meta['show_summary'] = array('onoff');
         $meta['webhook'] = array('string');
         $meta['username'] = array('string');
+        $meta['icon'] = array('string');
