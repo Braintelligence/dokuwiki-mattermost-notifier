@@ -112,7 +112,7 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
                 $oldRev = $INFO['meta']['last_change']['date'];
                 if (!empty($oldRev)) {
                         $diffURL = $this->_get_url($oldRev);
-                        $title .= " ([Compare Changes]({$diffURL}))";
+                        $title .= " ([Änderungen vergleichen]({$diffURL}))";
                 }
         }
         $this->_payload = array("text" => $title, "username" => $this->getConf('username'));
