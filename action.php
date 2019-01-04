@@ -90,7 +90,7 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
                         $event = "aktualisierte";
                         break;
                 case 'delete':
-                        $event = "löschte";
+                        $event = "loeschte";
                         break;
         }
         $user = $INFO['userinfo']['name'];
@@ -112,7 +112,7 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
                 $oldRev = $INFO['meta']['last_change']['date'];
                 if (!empty($oldRev)) {
                         $diffURL = $this->_get_url($oldRev);
-                        $title .= " ([Änderungen vergleichen]({$diffURL}))";
+                        $title .= " ([Aenderungen vergleichen]({$diffURL}))";
                 }
         }
         $this->_payload = array("text" => $title, "username" => $this->getConf('username'));
@@ -127,7 +127,7 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
         $user = $INFO['userinfo']['name'];
         if ($this->getConf('show_summary') == 1 && !empty($SUM)) {
                 $this->_payload['attachments'] = array(array(
-                        "fallback"      => "Ändere Zusammenfassung",
+                        "fallback"      => "Aendere Zusammenfassung",
                         "title"         => "Zusammenfassung",
                         "text"          => "{$SUM}\n- {$user}"
                 ));
