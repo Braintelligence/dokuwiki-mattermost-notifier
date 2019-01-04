@@ -116,7 +116,7 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
                 }
         }
         $this->_payload = array("text" => $title, "username" => $this->getConf('username'));
-        if ($this->getConf('icon') {
+        if (filter_var($this->getConf('icon'), FILTER_VALIDATE_URL)) {
             array_push($this->_payload, "icon_url" => $this->getConf('icon'));   
         }
     }
