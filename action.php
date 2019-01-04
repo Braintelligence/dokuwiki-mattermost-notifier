@@ -116,9 +116,9 @@ class action_plugin_mattermostnotifier extends DokuWiki_Action_Plugin {
                 }
         }
         $this->_payload = array("text" => $title, "username" => $this->getConf('username'));
-        /*if ($this->getConf('icon') {
+        if ($this->getConf('icon') {
             array_push($this->_payload, "icon_url" => $this->getConf('icon'));   
-        }*/
+        }
     }
 
     private function _set_payload_attachments() {
