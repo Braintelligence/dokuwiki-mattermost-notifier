@@ -6,3 +6,4 @@
         $lang['show_summary'] = "Show summary if one exists";
         $lang['webhook']    = "Mattermost Incoming Webhook URL";
         $lang['username']   = "Username for the bot to use";
+        $lang['icon']       = "URL to the mattermost user icon";
