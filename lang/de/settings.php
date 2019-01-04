@@ -6,3 +6,4 @@
         $lang['show_summary'] = "Zusammenfassung anzeigen, wenn verfügbar";
         $lang['webhook']    = "Mattermost Incoming Webhook URL";
         $lang['username']   = "Benutzername, den der Bot benutzen soll";
+        $lang['icon'] = "URL zum Icon, das bei Benachrichtigungen genutzt werden soll";
